@@ -26,9 +26,9 @@ Our mission is to inspire curiosity and excitement for STEM (Science, Technology
 ## Summary of Teams Decision making 
 By tailoring this project for Kindergarten through 12th-grade audiences, we decided we wanted to provide hands-on learning experiences that make complex scientific and engineering concepts accessible and relatable; through interactive demonstrations. Based on the ciriteria that students will explore critical STEM principles such as:
 
--Problem-solving: Understanding how sensors, coding, and mechanical design work together to solve a task.
--Technology integration: Gaining insights into how web-enabled systems can enhance physical devices.
--Practical application: Connecting STEM learning to real-world engineering and automation challenges.
+Problem-solving: Understanding how sensors, coding, and mechanical design work together to solve a task.
+Technology integration: Gaining insights into how web-enabled systems can enhance physical devices.
+Practical application: Connecting STEM learning to real-world engineering and automation challenges.
 This project not only fosters creativity and critical thinking but also highlights the importance of STEM in driving innovation and preparing students for a tech-driven future. By engaging young minds, we aim to cultivate the next generation of innovators and problem-solvers equipped to shape the world.
 
 
