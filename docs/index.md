@@ -1,18 +1,53 @@
 ---
-title: EGR 314 Group 303 Project
+title: EGR 314 Group 303 Project Report
 tags:
 - tag1
 - tag2
 ---
 
 ## project name
-**Team Number:** 303  
-**Team Members:** Cade Clonts, Tyler Dean, Jahmel Garduno, Daniel Resnick
-**Preparation Date:**   January 1st, 2025
-**Semester and Year:** Spring 2025
-**University:** Arizona State University 
-**Class:** EGR 314: Embedded Systems Design Project II
-**Professor:** Dr. Kevin Nichols, Dr. Daniel M. Aukes
+-**Team Number:** 303  
+-**Team Members:** Cade Clonts, Tyler Dean, Jahmel Garduno, Daniel Resnick
+-**Preparation Date:**   January 1st, 2025
+-**Semester and Year:** Spring 2025
+-**University:** Arizona State University 
+-**Class:** EGR 314: Embedded Systems Design Project II
+-**Professor:** Dr. Kevin Nichols, Dr. Daniel M. Aukes
+
+
+# Team Charter Report  
+
+## 1. Introduction  
+Provide a brief context for your team charter.  
+
+- State your team's purpose and the importance of aligning on goals for your design project.  
+- Summarize how your team began the discussion and agreed upon the project's direction.  
+
+**Example:**  
+"This team charter outlines the shared goals and vision for our product design project in EGR3X4. After discussing individual aspirations and evaluating the project description, we identified key goals that reflect success beyond simply achieving a high grade. This document formalizes our commitments, ensures accountability, and sets a clear roadmap for collaboration."  
+
+---
+
+## 2. Team Goals  
+List and explain the team’s shared goals, focusing on deeper aspects of success.  
+
+**Example Goals:**  
+1. **Develop a Market-Ready Product**  
+   Design a functional prototype suitable for future commercialization, ensuring it meets end-user needs and safety standards.  
+
+2. **Enhance Technical Skills**  
+   Gain hands-on experience with embedded systems, circuit design, and other relevant technologies to demonstrate proficiency to potential employers.  
+
+3. **Deliver a Portfolio-Worthy Project**  
+   Create detailed documentation and visuals to showcase the design process in resumes or professional profiles.  
+
+4. **Collaborate Effectively**  
+   Strengthen team collaboration, communication, and conflict-resolution skills, reflecting real-world engineering environments.  
+
+5. **Understand the Product Lifecycle**  
+   Explore all phases, from ideation to testing, including consideration of manufacturing and market launch strategies.
+
+
 
 ## Esse quoque sedem plena nunc iecur
 
