@@ -6,13 +6,13 @@ tags:
 ---
 
 ## project name
--**Team Number:** 303  
--**Team Members:** Cade Clonts, Tyler Dean, Jahmel Garduno, Daniel Resnick
--**Preparation Date:**   January 1st, 2025
--**Semester and Year:** Spring 2025
--**University:** Arizona State University 
--**Class:** EGR 314: Embedded Systems Design Project II
--**Professor:** Dr. Kevin Nichols, Dr. Daniel M. Aukes
+- **Team Number:** 303  
+- **Team Members:** Cade Clonts, Tyler Dean, Jahmel Garduno, Daniel Resnick
+- **Preparation Date:**   January 1st, 2025
+- **Semester and Year:** Spring 2025
+- **University:** Arizona State University 
+- **Class:** EGR 314: Embedded Systems Design Project II
+- **Professor:** Dr. Kevin Nichols, Dr. Daniel M. Aukes
 
 
 # Team Charter Report  
