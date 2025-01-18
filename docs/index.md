@@ -5,7 +5,7 @@ tags:
 - tag2
 ---
 
-## project name
+# Project Name
 - **Team Number:** 303  
 - **Team Members:** Cade Clonts, Tyler Dean, Jahmel Garduno, Daniel Resnick
 - **Preparation Date:**   January 1st, 2025
@@ -17,7 +17,7 @@ tags:
 
 # Team Charter Report  
 
-## 1. Introduction  
+## **Introduction**  
 Provide a brief context for your team charter.  
 
 - State your team's purpose and the importance of aligning on goals for your design project.  
@@ -28,10 +28,11 @@ Provide a brief context for your team charter.
 
 ---
 
-## 2. Team Goals  
+## **Team Goals**  
 List and explain the team’s shared goals, focusing on deeper aspects of success.  
 
 **Example Goals:**  
+
 1. **Develop a Market-Ready Product**  
    Design a functional prototype suitable for future commercialization, ensuring it meets end-user needs and safety standards.  
 
