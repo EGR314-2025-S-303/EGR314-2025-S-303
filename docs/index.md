@@ -1,19 +1,18 @@
 ---
-title: Welcome
+title: EGR 314 Group 303 Project
 tags:
 - tag1
 - tag2
 ---
 
-## Et poposcerat rursus ad magnus premit
-
-Lorem markdownum gradus, qui largis, nec pater pleno: fatum. Adspexit cursus
-cur, aut in adhuc crimina **habebat**: pro.
-
-- Et ducimus
-- Prosecta hinc nix vidi rettulit cum sitim
-- Has in tonitribus tenebrae Romane mirantum resupina
-- Figuras et dextram
+## project name
+**Team Number:** 303  
+**Team Members:** Cade Clonts, Tyler Dean, Jahmel Garduno, Daniel Resnick
+**Preparation Date:**   January 1st, 2025
+**Semester and Year:** Spring 2025
+**University:** Arizona State University 
+**Class:** EGR 314: Embedded Systems Design Project II
+**Professor:** Dr. Kevin Nichols, Dr. Daniel M. Aukes
 
 ## Esse quoque sedem plena nunc iecur
 
