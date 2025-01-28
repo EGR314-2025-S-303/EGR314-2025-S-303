@@ -17,3 +17,4 @@ The audience for the exhibit is Kindergarten through 12th-grade students, repres
 
 [IMG_7470.pdf](https://github.com/user-attachments/files/18568534/IMG_7470.pdf)
 
+![IMG_7470](https://github.com/user-attachments/assets/ef5c64cf-e923-4c13-9ce6-9c97f5b78f8f)
