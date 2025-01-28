@@ -8,16 +8,9 @@ The goal of the exhibit is to create interactive, engaging, and educational expe
 
 
 
-
 ## Who is our Audience?
 
 The audience for the exhibit is Kindergarten through 12th-grade students, representing a wide range of developmental stages, interests, and learning styles. The exhibit is designed to cater to this diverse group by providing engaging, hands-on activities that are accessible and educational for younger children while still challenging and thought-provoking for older students. It considers the physical, cognitive, and social needs of the audience, ensuring the content is age-appropriate, visually appealing, and interactive. Additionally, the design emphasizes inclusivity, accommodating students with varying abilities and encouraging group interactions to reflect the collaborative nature of learning at this age. 
-
-&nbsp
-&nbsp
-&nbsp
-&nbsp
-
 
 
 ## Generated Ideas 
@@ -25,8 +18,10 @@ The audience for the exhibit is Kindergarten through 12th-grade students, repres
 ![IMG_7470](https://github.com/user-attachments/assets/ef5c64cf-e923-4c13-9ce6-9c97f5b78f8f)
 
 
+
 ## Sorted and Ranked Ideas
 
 
-
+![SS_ideasorted](https://github.com/user-attachments/assets/1368ea3d-0ad1-4b0d-a0fd-e218ce6dda2d)
+![ranked_ss](https://github.com/user-attachments/assets/195d58ed-f445-4ee9-ba44-b1a70834d3b3)
 
