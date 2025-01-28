@@ -13,11 +13,7 @@ The goal of the exhibit is to create interactive, engaging, and educational expe
 
 The audience for the exhibit is Kindergarten through 12th-grade students, representing a wide range of developmental stages, interests, and learning styles. The exhibit is designed to cater to this diverse group by providing engaging, hands-on activities that are accessible and educational for younger children while still challenging and thought-provoking for older students. It considers the physical, cognitive, and social needs of the audience, ensuring the content is age-appropriate, visually appealing, and interactive. Additionally, the design emphasizes inclusivity, accommodating students with varying abilities and encouraging group interactions to reflect the collaborative nature of learning at this age.
 
-The many phases of your brainstorm session
-initial capture of design features
-during and after sorting, ranking and, refinement
-features grouped into your single design concept
-Design concept sketch
-1-page rationale
-embedded youtube video presentation
-Things to discuss
+
+
+[IMG_7470.pdf](https://github.com/user-attachments/files/18568534/IMG_7470.pdf)
+
