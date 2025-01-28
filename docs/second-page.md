@@ -31,3 +31,25 @@ Rank     |         Quality
 2        |         Medium 
 3        |         Low
 
+
+## Concept Sketch
+import pdf file here 
+
+Describe, in one page (in word, single spaced, 12pt times new roman font),
+How the features highlighted in your concept sketch satisfy the needs of museum visitors.
+How the functionality will will be split across four teammates (See the project description)
+Internet-based two-way communication
+Human machine interface via a screen and buttons
+Sensor and Actuator-based controlled response
+In this passage, please also use the two readings on science exhibits to justify how your concept satisfies the following questions:
+What kinds of cues will you provide to make the use of your device easier?
+How do you plan on designing your "controls" (see page 4 and 6 of the pdf for "Suggested Guidelines for Designing Interactive Exhibits")
+What role will durability, safety, and comfort play in the user experience?
+What kind of instruction will be needed to use the device? (see page 5 of the pdf for "Suggested Guidelines for Designing Interactive Exhibits")
+
+## Video Presentation 
+
+Insert Embedded video here 
+
+
+
