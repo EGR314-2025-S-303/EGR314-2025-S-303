@@ -6,6 +6,9 @@ tags:
 ---
 
 ## project name
+=======
+# Project Name
+
 - **Team Number:** 303  
 - **Team Members:** Cade Clonts, Tyler Dean, Jahmel Garduno, Daniel Resnick
 - **Preparation Date:**   January 1st, 2025
@@ -14,24 +17,33 @@ tags:
 - **Class:** EGR 314: Embedded Systems Design Project II
 - **Professor:** Dr. Kevin Nichols, Dr. Daniel M. Aukes
 
+ 
 
-# Team Charter Report  
+## Team Charter Report  
+Our team will work together to create a stem related interactive display. That display will be in the form of a web-enabled physical device. We will split our design into four subsystems one for each team member to head. We will have one actuator, one sensor, one controller and one HMI ( human machine interface) subsystems. To complete this project the team will have meetings ( dates and times to be determined) at least once a week. The team will finalize project decisions and familiarize each other with everyone's own subsystem. Decisions will be decided by a majority rule voting. In Between meetings and classes our team will communicate through Discord. Further roles and responsibilities will be discussed after our first meeting. 
 
-## 1. Introduction  
-Provide a brief context for your team charter.  
+## Mission Statement 
+Our mission is to inspire curiosity and excitement for STEM (Science, Technology, Engineering, and Math) through the development of innovative, interactive projects based on standards and modularity. This semester, we aim to design and construct a line-following robot, an engaging, web-enabled physical device that demonstrates the principles of automation, programming, and engineering. 
 
-- State your team's purpose and the importance of aligning on goals for your design project.  
-- Summarize how your team began the discussion and agreed upon the project's direction.  
+## Summary of Teams Decision making 
+By tailoring this project for Kindergarten through 12th-grade audiences, we decided we wanted to provide hands-on learning experiences that make complex scientific and engineering concepts accessible and relatable; through interactive demonstrations. Based on the ciriteria that students will explore critical STEM principles such as:
+
+Problem-solving: Understanding how sensors, coding, and mechanical design work together to solve a task.
+Technology integration: Gaining insights into how web-enabled systems can enhance physical devices.
+Practical application: Connecting STEM learning to real-world engineering and automation challenges.
+This project not only fosters creativity and critical thinking but also highlights the importance of STEM in driving innovation and preparing students for a tech-driven future. By engaging young minds, we aim to cultivate the next generation of innovators and problem-solvers equipped to shape the world.
+
 
 **Example:**  
 "This team charter outlines the shared goals and vision for our product design project in EGR3X4. After discussing individual aspirations and evaluating the project description, we identified key goals that reflect success beyond simply achieving a high grade. This document formalizes our commitments, ensures accountability, and sets a clear roadmap for collaboration."  
 
 ---
 
-## 2. Team Goals  
+## **Team Goals**  
 List and explain the team’s shared goals, focusing on deeper aspects of success.  
 
 **Example Goals:**  
+
 1. **Develop a Market-Ready Product**  
    Design a functional prototype suitable for future commercialization, ensuring it meets end-user needs and safety standards.  
 
@@ -48,7 +60,7 @@ List and explain the team’s shared goals, focusing on deeper aspects of succes
    Explore all phases, from ideation to testing, including consideration of manufacturing and market launch strategies.
 
 ## Concept and Idea Generation
-[![Concept and Idea Generation Video](https://img.youtube.com/vi/fRhLtXQKH90/0.jpg)](https://youtu.be/fRhLtXQKH90)
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fRhLtXQKH90?si=A_yCgXLyiOBgJdsG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
 
