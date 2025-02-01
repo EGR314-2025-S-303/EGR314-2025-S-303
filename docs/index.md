@@ -6,13 +6,13 @@ tags:
 ---
 
 ## project name
--**Team Number:** 303  
--**Team Members:** Cade Clonts, Tyler Dean, Jahmel Garduno, Daniel Resnick
--**Preparation Date:**   January 1st, 2025
--**Semester and Year:** Spring 2025
--**University:** Arizona State University 
--**Class:** EGR 314: Embedded Systems Design Project II
--**Professor:** Dr. Kevin Nichols, Dr. Daniel M. Aukes
+- **Team Number:** 303  
+- **Team Members:** Cade Clonts, Tyler Dean, Jahmel Garduno, Daniel Resnick
+- **Preparation Date:**   January 1st, 2025
+- **Semester and Year:** Spring 2025
+- **University:** Arizona State University 
+- **Class:** EGR 314: Embedded Systems Design Project II
+- **Professor:** Dr. Kevin Nichols, Dr. Daniel M. Aukes
 
 
 # Team Charter Report  
@@ -46,6 +46,28 @@ List and explain the team’s shared goals, focusing on deeper aspects of succes
 
 5. **Understand the Product Lifecycle**  
    Explore all phases, from ideation to testing, including consideration of manufacturing and market launch strategies.
+
+## Concept and Idea Generation
+[![Concept and Idea Generation Video](https://img.youtube.com/vi/fRhLtXQKH90/0.jpg)](https://youtu.be/fRhLtXQKH90)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
