@@ -16,14 +16,15 @@ The audience for the exhibit is Kindergarten through 12th-grade students, repres
 ## Generated Ideas 
 
 ![IMG_7470](https://github.com/user-attachments/assets/ef5c64cf-e923-4c13-9ce6-9c97f5b78f8f)
-
-
+<p align="center">
+<img src="https://github.com/user-attachments/assets/1368ea3d-0ad1-4b0d-a0fd-e218ce6dda2d" alt="SS_ideasorted")
+</p>
 
 ## Sorted and Ranked Ideas
 
-
-![SS_ideasorted](https://github.com/user-attachments/assets/1368ea3d-0ad1-4b0d-a0fd-e218ce6dda2d)
-![ranked_ss](https://github.com/user-attachments/assets/195d58ed-f445-4ee9-ba44-b1a70834d3b3)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/195d58ed-f445-4ee9-ba44-b1a70834d3b3" alt="ranked_ss">
+</p>
 
 Rank     |         Quality 
 ---------|----------------
