@@ -26,6 +26,7 @@ The audience for the exhibit is Kindergarten through 12th-grade students, repres
   <img src="https://github.com/user-attachments/assets/195d58ed-f445-4ee9-ba44-b1a70834d3b3" alt="ranked_ss">
 </p>
 
+
 Rank     |         Quality 
 ---------|----------------
 1        |         High
@@ -44,6 +45,7 @@ With all the functions of this display we will be able to split our project into
 
 
 ## Video Presentation 
+
 <iframe width="560" height="315" src="https://www.youtube.com/embed/fRhLtXQKH90?si=A_yCgXLyiOBgJdsG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
