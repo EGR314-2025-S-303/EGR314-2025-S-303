@@ -3,11 +3,7 @@ title: Charts
 ---
 
 ## Block Diagram
-
-<img src="Team-Block-Diagram.png" width="150">
-
-![](Team-Block-Diagram.png)
-
+<img src="Team-Block-Diagram.png">
 
 
 ``` mermaid
