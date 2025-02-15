@@ -5,7 +5,7 @@ tags:
 - tag2
 ---
 
-# Weather Station
+# **Weather Station**
 
 - **Team Number:** 303  
 - **Team Members:** Cade Clonts, Tyler Dean, Jahmel Garduno, Daniel Resnick
@@ -17,13 +17,13 @@ tags:
 
  
 
-## Team Charter Report  
+## **Team Charter Report**  
 Our team will work together to create a stem related interactive display. That display will be in the form of a web-enabled physical device. We will split our design into four subsystems one for each team member to head. We will have one actuator, one sensor, one controller and one HMI ( human machine interface) subsystems. To complete this project the team will have meetings ( dates and times to be determined) at least once a week. The team will finalize project decisions and familiarize each other with everyone's own subsystem. Decisions will be decided by a majority rule voting. In Between meetings and classes our team will communicate through Discord. Further roles and responsibilities will be discussed after our first meeting. 
 
-## Mission Statement 
+## **Mission Statement** 
 Our mission is to inspire curiosity and excitement for STEM (Science, Technology, Engineering, and Math) through the development of innovative, interactive projects based on standards and modularity. This semester, we aim to design and construct a line-following robot, an engaging, web-enabled physical device that demonstrates the principles of automation, programming, and engineering. 
 
-## Summary of Teams Decision making 
+## **Summary of Teams Decision making** 
 By tailoring this project for Kindergarten through 12th-grade audiences, we decided we wanted to provide hands-on learning experiences that make complex scientific and engineering concepts accessible and relatable; through interactive demonstrations. Based on the ciriteria that students will explore critical STEM principles such as:
 
 Problem-solving: Understanding how sensors, coding, and mechanical design work together to solve a task.
