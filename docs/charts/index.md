@@ -2,7 +2,7 @@
 title: Charts
 ---
 
-##Block Diagram
+## Block Diagram
 
 <img src="Team-Block-Diagram.png" width="150">
 
