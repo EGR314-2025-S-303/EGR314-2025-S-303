@@ -478,6 +478,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#sequence-diagram" class="md-nav__link">
+    Sequence Diagram
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -503,35 +510,23 @@
 
   <h1>Charts</h1>
 
-<h2 id="block-diagram">Block Diagram</h2>
+<h2 id="block-diagram"><strong>Block Diagram</strong></h2>
 <p><a class="glightbox" href="Team-Block-Diagram.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="Team-Block-Diagram.png"></a></p>
-<pre class="mermaid"><code>graph LR
-  A[Start] --&gt; B{Error?};
-  B --&gt;|Yes| C[Hmm...];
-  C --&gt; D[Debug];
-  D --&gt; B;
-  B ----&gt;|No| E[Yay!];</code></pre>
+<h2 id="sequence-diagram"><strong>Sequence Diagram</strong></h2>
 <pre class="mermaid"><code>sequenceDiagram
-  autonumber
-  Alice-&gt;&gt;John: Hello John, how are you?
-  loop Healthcheck
-      John-&gt;&gt;John: Fight against hypochondria
-  end
-  Note right of John: Rational thoughts!
-  John--&gt;&gt;Alice: Great!
-  John-&gt;&gt;Bob: How about you?
-  Bob--&gt;&gt;John: Jolly good!</code></pre>
-<pre class="mermaid"><code>stateDiagram-v2
-  state fork_state &lt;&lt;fork&gt;&gt;
-    [*] --&gt; fork_state
-    fork_state --&gt; State2
-    fork_state --&gt; State3
-
-    state join_state &lt;&lt;join&gt;&gt;
-    State2 --&gt; join_state
-    State3 --&gt; join_state
-    join_state --&gt; State4
-    State4 --&gt; [*]</code></pre>
+    Cade--&gt;&gt;+Dan: Start Motor
+    Dan--&gt;&gt;-Dan: Start Motor Trash 
+    Jahmel--&gt;&gt;+Tyler: Set Motor Speed
+    Tyler--&gt;&gt;+Cade: Motor Speed
+    Cade--&gt;&gt;+Dan: Motor Speed
+    Dan--&gt;&gt;-Dan: Set Motor Speed Trash
+    loop Every second
+    Tyler--&gt;&gt;+Cade: Sensor Data
+    Cade--&gt;&gt;+Dan: Sensor Data
+    Dan--&gt;&gt;+Jahmel: Sensor Data
+    Jahmel--&gt;&gt;+Tyler: Sensor Data
+    Tyler--&gt;&gt;-Tyler: Sesnor Data Trash
+    end</code></pre>
 
 
 
