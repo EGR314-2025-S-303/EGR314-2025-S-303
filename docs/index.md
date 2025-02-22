@@ -49,3 +49,12 @@ This project not only fosters creativity and critical thinking but also highligh
 
 5. **Understand the Product Lifecycle**  
    Explore all phases, from ideation to testing, including consideration of manufacturing and market launch strategies.
+
+## **Links**
+Name | Link
+-----|------------
+Team Website   | [link](https://egr314-2025-s-303.github.io/EGR314-2025-S-303/)
+Cade Clonts   | [link](https://cclonts2.github.io/)
+Tyler Dean | [link](https://ty-357.github.io/)
+Jahmel Garduno | [link](https://jahmelg10.github.io/)
+Daniel Resnick | [link]()
