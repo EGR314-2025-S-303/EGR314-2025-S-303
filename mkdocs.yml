@@ -1,6 +1,6 @@
 site_name: EGR314 Report Team 303
-site_url: https://embedded-systems-design.github.io/template_report
-repo_url: https://github.com/embedded-systems-design/template_report
+site_url: https://egr314-2025-s-303.github.io/EGR314-2025-S-303/
+repo_url: https://github.com/EGR314-2025-S-303
 edit_uri: edit/main/docs/
 theme:
   name: material
@@ -77,7 +77,7 @@ extra_javascript:
 not_in_nav: |
   static
   
-copyright: "Copyright &copy; 2024 team-name-here"
+copyright: "Copyright &copy; 2025 ASU-EGR314-S-303 Team"
 
 extra:
   generator: false
