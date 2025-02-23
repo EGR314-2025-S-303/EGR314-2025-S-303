@@ -1,6 +1,6 @@
 site_name: EGR314 Report Team 303
 site_url: https://egr314-2025-s-303.github.io/EGR314-2025-S-303/
-repo_url: https://github.com/EGR314-2025-S-303
+repo_url: https://github.com/EGR314-2025-S-303/EGR314-2025-S-303/
 edit_uri: edit/main/docs/
 theme:
   name: material
