@@ -514,18 +514,25 @@
 <p><a class="glightbox" href="Team-Block-Diagram.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="Team-Block-Diagram.png"></a></p>
 <h2 id="sequence-diagram"><strong>Sequence Diagram</strong></h2>
 <pre class="mermaid"><code>sequenceDiagram
-    Cade--&gt;&gt;+Dan: Start Motor
-    Dan--&gt;&gt;-Dan: Start Motor Trash 
-    Jahmel--&gt;&gt;+Tyler: Set Motor Speed
-    Tyler--&gt;&gt;+Cade: Motor Speed
-    Cade--&gt;&gt;+Dan: Motor Speed
-    Dan--&gt;&gt;-Dan: Set Motor Speed Trash
-    loop Every second
-    Tyler--&gt;&gt;+Cade: Sensor Data
-    Cade--&gt;&gt;+Dan: Sensor Data
-    Dan--&gt;&gt;+Jahmel: Sensor Data
-    Jahmel--&gt;&gt;+Tyler: Sensor Data
-    Tyler--&gt;&gt;-Tyler: Sesnor Data Trash
+    actor Web User
+    Web User--&gt;&gt;+Cade: Turn on LED1
+    Cade-&gt;&gt;+Tyler: Turn on LED1
+    Tyler-&gt;&gt;+Dan: Turn on LED1
+    Dan-&gt;&gt;+Jahmel: Turn on LED1
+    Jahmel-&gt;&gt;-Jahmel: LED1 ON, Trash Message
+    actor In Person User
+    In Person User--&gt;&gt;+Jahmel: Set Motor Speed
+    Jahmel-&gt;&gt;+Cade: Set Motor Speed
+    Cade-&gt;&gt;+Tyler: Set Motor Speed
+    Tyler-&gt;&gt;+Dan: Set Motor Speed
+    Dan-&gt;&gt;-Dan: Set Motor Speed Trash
+    loop Every 1 second
+    Tyler-&gt;&gt;+Dan: Sensor Data
+    Dan-&gt;&gt;+Jahmel: Sensor Data
+    Jahmel--&gt;&gt;+In Person User: Sensor Data
+    Jahmel-&gt;&gt;+Cade: Sensor Data
+    Cade--&gt;&gt;+Web User: Sensor Data
+    Cade-&gt;&gt;-Cade: Sensor Data Trash
     end</code></pre>
 
 
