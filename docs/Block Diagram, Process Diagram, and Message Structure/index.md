@@ -44,9 +44,9 @@ Proposed Structure:
 
 Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0001
-Byte 3 (uint8_t): Sensor ID
-Bytes 4–5 (int16_t): Temperature reading
-Bytes 6–7 (uint16_t): Humidity reading
+Byte 3 (uint8_t): **Sensor ID**
+Bytes 4–5 (int16_t): **Temperature reading**
+Bytes 6–7 (uint16_t): **Humidity reading**
 Total Length: 7 bytes
 
 Message Type 2: Fan Control Command
@@ -57,13 +57,13 @@ Proposed Structure:
 
 Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0002
-Byte 3 (uint8_t): Command/Action Code
+Byte 3 (uint8_t): **Command/Action Code**
 For instance, 0 = OFF, 1 = ON
-Byte 4 (uint8_t): Optional: Fan Speed Level
+Byte 4 (uint8_t): Optional: **Fan Speed Level**
 A value from 0 to 100 (or any range you decide). If not used, you can default it to 0.
 Total Length: 4 bytes
 
-Message Type 3: OLED Display Text Command
+Message Type 3: **OLED Display Text Command**
 Purpose:
 Send a text string to the OLED display for showing information.
 
@@ -71,12 +71,12 @@ Proposed Structure:
 
 Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0003
-Byte 3 (uint8_t): Display Command or Line Indicator
+Byte 3 (uint8_t): **Display Command or Line Indicator**
 Bytes 4–58 (char): Text to display
 A string up to 55 characters (since one byte is reserved for the null terminator).
 Total Length: Up to 58 bytes
 
-Message Type 4: Button Press Event
+Message Type 4: **Button Press Event**
 Purpose:
 Notify that one of the two buttons on your HMI has been pressed.
 
@@ -84,11 +84,11 @@ Proposed Structure:
 
 Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0004
-Byte 3 (uint8_t): Button Identifier
+Byte 3 (uint8_t): **Button Identifier**
 For example, 0x01 could indicate the “Select” button and 0x02 the “Confirm” button.
 Total Length: 3 bytes
 
-Message Type 5: MQTT Publish Message
+Message Type 5: **MQTT Publish Message**
 Purpose:
 Send data through the MQTT subsystem to a remote server or cloud service.
 
@@ -96,7 +96,7 @@ Proposed Structure:
 
 Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0005
-Byte 3 (uint8_t): Topic Identifier or Sub-type
+Byte 3 (uint8_t): **Topic Identifier or Sub-type**
 For example, 0x01 might represent sensor data, while 0x02 might indicate a status update from an actuator.
 Bytes 4–58 (char): Payload
 Total Length: Up to 58 bytes
