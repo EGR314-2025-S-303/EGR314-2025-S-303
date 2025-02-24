@@ -1,3 +1,7 @@
+---
+title: 
+---
+
 ## **Team Charter Report**  
 Our team will work together to create a stem related interactive display. That display will be in the form of a web-enabled physical device. We will split our design into four subsystems one for each team member to head. We will have one actuator, one sensor, one controller and one HMI ( human machine interface) subsystems. To complete this project the team will have meetings ( dates and times to be determined) at least once a week. The team will finalize project decisions and familiarize each other with everyone's own subsystem. Decisions will be decided by a majority rule voting. In Between meetings and classes our team will communicate through Discord. Further roles and responsibilities will be discussed after our first meeting. 
 
