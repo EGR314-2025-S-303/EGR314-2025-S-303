@@ -1,5 +1,5 @@
 ---
-title: 
+title: Team Organization
 ---
 
 ## **Team Charter Report**  
