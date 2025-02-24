@@ -613,9 +613,9 @@ Transmit the current temperature and humidity from the sensor.</p>
 <p>Proposed Structure:</p>
 <p>Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0001
-Byte 3 (uint8_t): Sensor ID
-Bytes 4–5 (int16_t): Temperature reading
-Bytes 6–7 (uint16_t): Humidity reading
+Byte 3 (uint8_t): <strong>Sensor ID</strong>
+Bytes 4–5 (int16_t): <strong>Temperature reading</strong>
+Bytes 6–7 (uint16_t): <strong>Humidity reading</strong>
 Total Length: 7 bytes</p>
 <p>Message Type 2: Fan Control Command
 Purpose:
@@ -623,37 +623,37 @@ Control the fan (e.g., to turn it on or off, or adjust its speed).</p>
 <p>Proposed Structure:</p>
 <p>Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0002
-Byte 3 (uint8_t): Command/Action Code
+Byte 3 (uint8_t): <strong>Command/Action Code</strong>
 For instance, 0 = OFF, 1 = ON
-Byte 4 (uint8_t): Optional: Fan Speed Level
+Byte 4 (uint8_t): Optional: <strong>Fan Speed Level</strong>
 A value from 0 to 100 (or any range you decide). If not used, you can default it to 0.
 Total Length: 4 bytes</p>
-<p>Message Type 3: OLED Display Text Command
+<p>Message Type 3: <strong>OLED Display Text Command</strong>
 Purpose:
 Send a text string to the OLED display for showing information.</p>
 <p>Proposed Structure:</p>
 <p>Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0003
-Byte 3 (uint8_t): Display Command or Line Indicator
+Byte 3 (uint8_t): <strong>Display Command or Line Indicator</strong>
 Bytes 4–58 (char): Text to display
 A string up to 55 characters (since one byte is reserved for the null terminator).
 Total Length: Up to 58 bytes</p>
-<p>Message Type 4: Button Press Event
+<p>Message Type 4: <strong>Button Press Event</strong>
 Purpose:
 Notify that one of the two buttons on your HMI has been pressed.</p>
 <p>Proposed Structure:</p>
 <p>Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0004
-Byte 3 (uint8_t): Button Identifier
+Byte 3 (uint8_t): <strong>Button Identifier</strong>
 For example, 0x01 could indicate the “Select” button and 0x02 the “Confirm” button.
 Total Length: 3 bytes</p>
-<p>Message Type 5: MQTT Publish Message
+<p>Message Type 5: <strong>MQTT Publish Message</strong>
 Purpose:
 Send data through the MQTT subsystem to a remote server or cloud service.</p>
 <p>Proposed Structure:</p>
 <p>Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0005
-Byte 3 (uint8_t): Topic Identifier or Sub-type
+Byte 3 (uint8_t): <strong>Topic Identifier or Sub-type</strong>
 For example, 0x01 might represent sensor data, while 0x02 might indicate a status update from an actuator.
 Bytes 4–58 (char): Payload
 Total Length: Up to 58 bytes</p>
