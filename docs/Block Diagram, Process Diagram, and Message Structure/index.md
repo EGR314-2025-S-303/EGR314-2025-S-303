@@ -45,11 +45,8 @@ Proposed Structure:
 Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0001
 Byte 3 (uint8_t): Sensor ID
-(For example, if you plan on having more than one sensor. Otherwise, this could be a fixed value like 0.)
 Bytes 4–5 (int16_t): Temperature reading
-(In tenths of degrees Celsius. For instance, 254 represents 25.4°C.)
 Bytes 6–7 (uint16_t): Humidity reading
-(Expressed in hundredths of a percent. For example, 5000 represents 50.00%)
 Total Length: 7 bytes
 
 Message Type 2: Fan Control Command
@@ -61,7 +58,7 @@ Proposed Structure:
 Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0002
 Byte 3 (uint8_t): Command/Action Code
-For instance, 0 = OFF, 1 = ON. (If using variable speeds, you might assign other values or use the next byte.)
+For instance, 0 = OFF, 1 = ON
 Byte 4 (uint8_t): Optional: Fan Speed Level
 A value from 0 to 100 (or any range you decide). If not used, you can default it to 0.
 Total Length: 4 bytes
@@ -75,7 +72,6 @@ Proposed Structure:
 Bytes 1–2 (uint16_t): Message Type ID
 Value: 0x0003
 Byte 3 (uint8_t): Display Command or Line Indicator
-For example, 0 might mean “clear screen” while 1, 2, etc., could refer to specific display lines or update commands.
 Bytes 4–58 (char): Text to display
 A string up to 55 characters (since one byte is reserved for the null terminator).
 Total Length: Up to 58 bytes
@@ -103,7 +99,6 @@ Value: 0x0005
 Byte 3 (uint8_t): Topic Identifier or Sub-type
 For example, 0x01 might represent sensor data, while 0x02 might indicate a status update from an actuator.
 Bytes 4–58 (char): Payload
-A string formatted as needed (perhaps in JSON or CSV format) to encapsulate your data. Remember that the string’s length is effectively limited to 55 characters because of the null terminator.
 Total Length: Up to 58 bytes
 
 
