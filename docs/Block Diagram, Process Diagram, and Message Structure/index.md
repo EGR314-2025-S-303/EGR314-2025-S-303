@@ -1,5 +1,6 @@
 ---
-tag1
+tags:
+- tag1
 ---
 
 ## **Block Diagram**
