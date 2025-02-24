@@ -2,10 +2,7 @@
 title: Main Page
 tags:
 - tag1
-- tag2
 ---
-
-# **Weather Station**
 
 - **Team Number:** 303  
 - **Team Members:** Cade Clonts, Tyler Dean, Jahmel Garduno, Daniel Resnick
@@ -15,42 +12,23 @@ tags:
 - **Class:** EGR 314: Embedded Systems Design Project II
 - **Professor:** Dr. Kevin Nichols, Dr. Daniel M. Aukes
 
- 
+ ---
 
-## **Team Charter Report**  
-Our team will work together to create a stem related interactive display. That display will be in the form of a web-enabled physical device. We will split our design into four subsystems one for each team member to head. We will have one actuator, one sensor, one controller and one HMI ( human machine interface) subsystems. To complete this project the team will have meetings ( dates and times to be determined) at least once a week. The team will finalize project decisions and familiarize each other with everyone's own subsystem. Decisions will be decided by a majority rule voting. In Between meetings and classes our team will communicate through Discord. Further roles and responsibilities will be discussed after our first meeting. 
+Welcome to the official project page for **Team 303**, where we are developing an interactive, web-enabled **Weather Station**. Our goal is to create an engaging STEM-based display that provides real-time environmental data while demonstrating key principles of **embedded systems, automation, and human-machine interaction**.
 
-## **Mission Statement** 
-Our mission is to inspire curiosity and excitement for STEM (Science, Technology, Engineering, and Math) through the development of innovative, interactive projects based on standards and modularity. This semester, we aim to design and construct a line-following robot, an engaging, web-enabled physical device that demonstrates the principles of automation, programming, and engineering. 
+Our design is structured into four core subsystems, each led by a team member:
 
-## **Summary of Teams Decision making** 
-By tailoring this project for Kindergarten through 12th-grade audiences, we decided we wanted to provide hands-on learning experiences that make complex scientific and engineering concepts accessible and relatable; through interactive demonstrations. Based on the ciriteria that students will explore critical STEM principles such as:
+- **Communication (Cade Clonts)** – Manages web communication using an ESP32.
+- **Sensor (Tyler Dean)** – Collects environmental data using a PIC microcontroller.
+- **Actuator (Daniel Resnick)** – Controls mechanical responses based on system inputs.
+- **Human-Machine Interface (Jahmel Garduno)** – Ensures intuitive user interaction.
 
-Problem-solving: Understanding how sensors, coding, and mechanical design work together to solve a task.
-Technology integration: Gaining insights into how web-enabled systems can enhance physical devices.
-Practical application: Connecting STEM learning to real-world engineering and automation challenges.
-This project not only fosters creativity and critical thinking but also highlights the importance of STEM in driving innovation and preparing students for a tech-driven future. By engaging young minds, we aim to cultivate the next generation of innovators and problem-solvers equipped to shape the world.
+We utilize **UART communication** between microcontrollers and **SPI/I2C protocols** for sensor-actuator coordination. By integrating modular design principles, we aim to develop a system that is both functional and scalable.
+
+Through this project, we strive to **inspire curiosity in STEM** by showcasing real-world applications of embedded systems and interactive technology. Stay tuned as we document our progress, challenges, and insights throughout the semester!
 
 ---
 
-## **Team Goals**   
-
-1. **Develop a Market-Ready Product**  
-   Design a functional prototype suitable for future commercialization, ensuring it meets end-user needs and safety standards.  
-
-2. **Enhance Technical Skills**  
-   Gain hands-on experience with embedded systems, circuit design, and other relevant technologies to demonstrate proficiency to potential employers.  
-
-3. **Deliver a Portfolio-Worthy Project**  
-   Create detailed documentation and visuals to showcase the design process in resumes or professional profiles.  
-
-4. **Collaborate Effectively**  
-   Strengthen team collaboration, communication, and conflict-resolution skills, reflecting real-world engineering environments.  
-
-5. **Understand the Product Lifecycle**  
-   Explore all phases, from ideation to testing, including consideration of manufacturing and market launch strategies.
-
-## **Links**
 Name | Link
 -----|------------
 Team Website   | [link](https://egr314-2025-s-303.github.io/EGR314-2025-S-303/)
