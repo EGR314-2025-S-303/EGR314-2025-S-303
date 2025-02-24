@@ -1,6 +1,3 @@
----
-title: Ideation and Concept Generation 
----
 
 ## **Goal of Exhibit** 
 
