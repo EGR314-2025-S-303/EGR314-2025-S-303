@@ -1,8 +1,10 @@
+---
+title: Ideation and Concept Generation
+---
 
 ## **Goal of Exhibit** 
 
 The goal of the exhibit is to create interactive, engaging, and educational experiences tailored to Kindergarten through 12th-grade students. Using interactive features, the exhibit aims to foster curiosity and active exploration by encouraging students to engage directly with scientific, cultural, or artistic concepts. By incorporating age-appropriate, hands-on activities, the exhibit seeks to make learning enjoyable and memorable while addressing key educational objectives such as understanding cause-and-effect relationships, correcting misconceptions, and sparking interest in the subject matter. The primary focus is on ensuring that students can interact with the exhibit in meaningful ways, promoting discovery and conceptual understanding through well-designed, intuitive, and durable interactive elements.
-
 
 
 ## **Who is our Audience?**
