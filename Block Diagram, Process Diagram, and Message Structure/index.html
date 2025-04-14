@@ -549,9 +549,49 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#message-system" class="md-nav__link">
-    Message System
+  <a href="#message-id" class="md-nav__link">
+    Message ID
   </a>
+  
+    <nav class="md-nav" aria-label="Message ID">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    Status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#message-types" class="md-nav__link">
+    Message Types
+  </a>
+  
+    <nav class="md-nav" aria-label="Message Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#temperature-sensor-message-type-1" class="md-nav__link">
+    Temperature Sensor (Message Type 1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fan-control-message-type-2" class="md-nav__link">
+    Fan Control (Message Type 2)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -581,82 +621,336 @@
   <h1>Index</h1>
 
 <h2 id="block-diagram"><strong>Block Diagram</strong></h2>
-<p>The team’s block diagram outlines the flow of communication and functionality across different components in the system. Cade, utilizing an ESP32 microchip, serves as the central hub for bidirectional communication with the other team members, who use PIC microcontrollers. Data flows sequentially from Cade to Tyler, who manages sensor integration, then to Dan, who controls the actuator, and finally to Jahmel, responsible for the Human-Machine Interface (HMI), before looping back to Cade. The boards communicate via UART, ensuring reliable data transmission between each module. Additionally, the sensor and actuator exchange data through either SPI or I2C protocols, enabling efficient and precise control of the system’s operation.</p>
+<p>The team’s block diagram outlines the flow of communication and functionality across different components in the system. Cade, utilizing an ESP32 microchip, serves as the central hub for bidirectional communication with the other team members, who use PIC microcontrollers. Data flows sequentially from Cade to Dan, who manages both sensor integration and actuator control, and then to Jahmel, responsible for the Human-Machine Interface (HMI), before looping back to Cade. The boards communicate via UART, ensuring reliable data transmission between each module. Additionally, the sensor and actuator exchange data through either SPI or I2C protocols, enabling efficient and precise control of the system’s operation.</p>
 <p><a class="glightbox" href="Team-Block-Diagram.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="Team-Block-Diagram.png"></a></p>
 <h2 id="sequence-diagram"><strong>Sequence Diagram</strong></h2>
-<p>The sequence diagram illustrates the communication flow between users and system components, ensuring synchronized operation. When a Web User requests to turn on LED1, the command is passed sequentially from Cade to Tyler, then to Dan, and finally to Jahmel, who activates the LED and discards the processed message. Similarly, when an In-Person User sets the motor speed, the request travels from Jahmel to Cade, through Tyler, and then to Dan, who executes the command before discarding the message. Additionally, sensor data is transmitted in a continuous 1-second loop, where Tyler sends data to Dan, who forwards it to Jahmel. Jahmel provides real-time feedback to the In-Person User while also relaying the data to Cade, who then updates the Web User before discarding the received data. This structured communication ensures efficient data flow and command execution throughout the system.</p>
+<p>The sequence diagram illustrates the communication flow between users and system components, ensuring synchronized operation. When a Web User requests to turn on LED1, the command is passed sequentially from Cade to Dan, and then to Jahmel, who activates the LED and discards the processed message. Similarly, when an In-Person User sets the motor speed, the request travels from Jahmel to Cade, and then to Dan, who executes the command before discarding the message. Additionally, sensor data is transmitted in a continuous 1-second loop, where Dan sends data to Jahmel. Jahmel provides real-time feedback to the In-Person User while also relaying the data to Cade, who then updates the Web User before discarding the received data. This structured communication ensures efficient data flow and command execution throughout the system.</p>
 <pre class="mermaid"><code>sequenceDiagram
     actor Web User
     Web User--&gt;&gt;+Cade: Turn on LED1
-    Cade-&gt;&gt;+Tyler: Turn on LED1
-    Tyler-&gt;&gt;+Dan: Turn on LED1
+    Cade-&gt;&gt;+Dan: Turn on LED1
     Dan-&gt;&gt;+Jahmel: Turn on LED1
     Jahmel-&gt;&gt;-Jahmel: LED1 ON, Trash Message
     actor In Person User
     In Person User--&gt;&gt;+Jahmel: Set Motor Speed
     Jahmel-&gt;&gt;+Cade: Set Motor Speed
-    Cade-&gt;&gt;+Tyler: Set Motor Speed
-    Tyler-&gt;&gt;+Dan: Set Motor Speed
-    Dan-&gt;&gt;-Dan: Set Motor Speed Trash
-    loop Every 1 second
-    Tyler-&gt;&gt;+Dan: Sensor Data
+    Web User--&gt;&gt;+Cade: Set Motor Speed
+    Cade-&gt;&gt;+Dan: Set Motor Speed
+    Dan-&gt;&gt;+Dan: Set Motor Speed Trash
+    loop Every 3 second
+    Cade-&gt;&gt;+Dan: Sensor Data
+    Cade--&gt;&gt;+Web User: Sensor Data
     Dan-&gt;&gt;+Jahmel: Sensor Data
     Jahmel--&gt;&gt;+In Person User: Sensor Data
     Jahmel-&gt;&gt;+Cade: Sensor Data
-    Cade--&gt;&gt;+Web User: Sensor Data
     Cade-&gt;&gt;-Cade: Sensor Data Trash
     end</code></pre>
-<h2 id="message-system">Message System</h2>
-<p>Message Type 1: Sensor Reading (Temperature/Humidity)
-Purpose:
-Transmit the current temperature and humidity from the sensor.</p>
-<p>Proposed Structure:</p>
-<p>Bytes 1–2 (uint16_t): Message Type ID
-Value: 0x0001
-Byte 3 (uint8_t): <strong>Sensor ID</strong>
-Bytes 4–5 (int16_t): <strong>Temperature reading</strong>
-Bytes 6–7 (uint16_t): <strong>Humidity reading</strong>
-Total Length: 7 bytes</p>
-<p>Message Type 2: Fan Control Command
-Purpose:
-Control the fan (e.g., to turn it on or off, or adjust its speed).</p>
-<p>Proposed Structure:</p>
-<p>Bytes 1–2 (uint16_t): Message Type ID
-Value: 0x0002
-Byte 3 (uint8_t): <strong>Command/Action Code</strong>
-For instance, 0 = OFF, 1 = ON
-Byte 4 (uint8_t): Optional: <strong>Fan Speed Level</strong>
-A value from 0 to 100 (or any range you decide). If not used, you can default it to 0.
-Total Length: 4 bytes</p>
-<p>Message Type 3: <strong>OLED Display Text Command</strong>
-Purpose:
-Send a text string to the OLED display for showing information.</p>
-<p>Proposed Structure:</p>
-<p>Bytes 1–2 (uint16_t): Message Type ID
-Value: 0x0003
-Byte 3 (uint8_t): <strong>Display Command or Line Indicator</strong>
-Bytes 4–58 (char): Text to display
-A string up to 55 characters (since one byte is reserved for the null terminator).
-Total Length: Up to 58 bytes</p>
-<p>Message Type 4: <strong>Button Press Event</strong>
-Purpose:
-Notify that one of the two buttons on your HMI has been pressed.</p>
-<p>Proposed Structure:</p>
-<p>Bytes 1–2 (uint16_t): Message Type ID
-Value: 0x0004
-Byte 3 (uint8_t): <strong>Button Identifier</strong>
-For example, 0x01 could indicate the “Select” button and 0x02 the “Confirm” button.
-Total Length: 3 bytes</p>
-<p>Message Type 5: <strong>MQTT Publish Message</strong>
-Purpose:
-Send data through the MQTT subsystem to a remote server or cloud service.</p>
-<p>Proposed Structure:</p>
-<p>Bytes 1–2 (uint16_t): Message Type ID
-Value: 0x0005
-Byte 3 (uint8_t): <strong>Topic Identifier or Sub-type</strong>
-For example, 0x01 might represent sensor data, while 0x02 might indicate a status update from an actuator.
-Bytes 4–58 (char): Payload
-Total Length: Up to 58 bytes</p>
+<h2 id="message-id">Message ID</h2>
+<p>The Message ID table defines the unique identifiers for system members and their associated addresses. Each member is assigned a specific ID and address for communication within the system.</p>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>System</th>
+<th>ID</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cade Clonts</td>
+<td>Wifi</td>
+<td>1</td>
+<td>0x01</td>
+</tr>
+<tr>
+<td>Jahmel</td>
+<td>Human Interface</td>
+<td>2</td>
+<td>0x02</td>
+</tr>
+<tr>
+<td>Dan</td>
+<td>Fan Control</td>
+<td>3</td>
+<td>0x03</td>
+</tr>
+<tr>
+<td>Broadcast</td>
+<td>All</td>
+<td>88</td>
+<td>0x58</td>
+</tr>
+</tbody>
+</table>
+<h3 id="status">Status</h3>
+<p>The Status table defines the status codes used in the system to indicate the state of a message or operation.</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Normal</td>
+<td>0x00</td>
+</tr>
+<tr>
+<td>Error</td>
+<td>0x01</td>
+</tr>
+</tbody>
+</table>
+<h2 id="message-types">Message Types</h2>
+<p>The Message Types table categorizes the types of messages and their associated status or code ranges.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Status/Code</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temp Data</td>
+<td>0 to 255</td>
+<td>0x10</td>
+</tr>
+<tr>
+<td>Fan Control</td>
+<td>0 to 3</td>
+<td>0x20</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="temperature-sensor-message-type-1">Temperature Sensor (Message Type 1)</h3>
+<p>The Temperature Sensor table defines the structure of messages for temperature data. Each byte in the message is mapped to a specific variable, with details about its type, range, and example values.</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Variable Type</th>
+<th>Min Value</th>
+<th>Max Value</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>prefix_1</td>
+<td>uint8_t</td>
+<td>0x41</td>
+<td>0x41</td>
+<td>0x41</td>
+</tr>
+<tr>
+<td>2</td>
+<td>prefix_2</td>
+<td>uint8_t</td>
+<td>0x5a</td>
+<td>0x5a</td>
+<td>0x5a</td>
+</tr>
+<tr>
+<td>3</td>
+<td>source_id</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>3</td>
+<td>0x03</td>
+</tr>
+<tr>
+<td>4</td>
+<td>destination_id</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>3 &amp; 88</td>
+<td>0x58</td>
+</tr>
+<tr>
+<td>5</td>
+<td>message_type</td>
+<td>uint8_t</td>
+<td>0x10</td>
+<td>0x10</td>
+<td>0x10</td>
+</tr>
+<tr>
+<td>6</td>
+<td>temp_id</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+<td>0x01</td>
+</tr>
+<tr>
+<td>7</td>
+<td>status</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>1</td>
+<td>0x01</td>
+</tr>
+<tr>
+<td>8</td>
+<td>temp_data_integer</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>255</td>
+<td>25</td>
+</tr>
+<tr>
+<td>9</td>
+<td>temp_data_fraction</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>99</td>
+<td>50</td>
+</tr>
+<tr>
+<td>10-62</td>
+<td>Unused</td>
+<td>uint8_t</td>
+<td>0x00</td>
+<td>0x00</td>
+<td>0x00</td>
+</tr>
+<tr>
+<td>63</td>
+<td>suffix_1</td>
+<td>uint8_t</td>
+<td>0x59</td>
+<td>0x59</td>
+<td>0x59</td>
+</tr>
+<tr>
+<td>64</td>
+<td>suffix_2</td>
+<td>uint8_t</td>
+<td>0x42</td>
+<td>0x42</td>
+<td>0x42</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fan-control-message-type-2">Fan Control (Message Type 2)</h3>
+<p>The Fan Control table defines the structure of messages for controlling fan speed. Each byte in the message is mapped to a specific variable, with details about its type, range, and example values.</p>
+<table>
+<thead>
+<tr>
+<th>Byte</th>
+<th>Variable Name</th>
+<th>Variable Type</th>
+<th>Min Value</th>
+<th>Max Value</th>
+<th>Example Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>prefix_1</td>
+<td>uint8_t</td>
+<td>0x41</td>
+<td>0x41</td>
+<td>0x41</td>
+</tr>
+<tr>
+<td>2</td>
+<td>prefix_2</td>
+<td>uint8_t</td>
+<td>0x5a</td>
+<td>0x5a</td>
+<td>0x5a</td>
+</tr>
+<tr>
+<td>3</td>
+<td>source_id</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>3</td>
+<td>0x01</td>
+</tr>
+<tr>
+<td>4</td>
+<td>destination_id</td>
+<td>uint8_t</td>
+<td>1</td>
+<td>3 &amp; 88</td>
+<td>0x04</td>
+</tr>
+<tr>
+<td>5</td>
+<td>message_type</td>
+<td>uint8_t</td>
+<td>0x20</td>
+<td>0x20</td>
+<td>0x20</td>
+</tr>
+<tr>
+<td>6</td>
+<td>fan_id</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>1</td>
+<td>0x02</td>
+</tr>
+<tr>
+<td>7</td>
+<td>status</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>1</td>
+<td>0x01</td>
+</tr>
+<tr>
+<td>8</td>
+<td>fan_speed_data</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>3</td>
+<td>0x02</td>
+</tr>
+<tr>
+<td>9</td>
+<td>fan_speed_set</td>
+<td>uint8_t</td>
+<td>0</td>
+<td>3</td>
+<td>0x01</td>
+</tr>
+<tr>
+<td>10-62</td>
+<td>Unused</td>
+<td>uint8_t</td>
+<td>0x00</td>
+<td>0x00</td>
+<td>0x00</td>
+</tr>
+<tr>
+<td>63</td>
+<td>suffix_1</td>
+<td>uint8_t</td>
+<td>0x59</td>
+<td>0x59</td>
+<td>0x59</td>
+</tr>
+<tr>
+<td>64</td>
+<td>suffix_2</td>
+<td>uint8_t</td>
+<td>0x42</td>
+<td>0x42</td>
+<td>0x42</td>
+</tr>
+</tbody>
+</table>
 
 
 
