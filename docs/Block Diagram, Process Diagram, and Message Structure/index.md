@@ -6,7 +6,7 @@ tags:
 ## **Block Diagram**
 The team’s block diagram outlines the flow of communication and functionality across different components in the system. Cade, utilizing an ESP32 microchip, serves as the central hub for bidirectional communication with the other team members, who use PIC microcontrollers. Data flows sequentially from Cade to Dan, who manages both sensor integration and actuator control, and then to Jahmel, responsible for the Human-Machine Interface (HMI), before looping back to Cade. The boards communicate via UART, ensuring reliable data transmission between each module. Additionally, the sensor and actuator exchange data through either SPI or I2C protocols, enabling efficient and precise control of the system’s operation.
 
-<img src="Team-Block-Diagram.png">
+<img src="Team-Block-Diagram-V2.png">
 
 ## **Sequence Diagram**
 
