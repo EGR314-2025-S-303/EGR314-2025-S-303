@@ -632,11 +632,13 @@
     Dan-&gt;&gt;+Jahmel: Turn on LED1
     Jahmel-&gt;&gt;-Jahmel: LED1 ON, Trash Message
     actor In Person User
-    In Person User--&gt;&gt;+Jahmel: Set Motor Speed
-    Jahmel-&gt;&gt;+Cade: Set Motor Speed
-    Web User--&gt;&gt;+Cade: Set Motor Speed
-    Cade-&gt;&gt;+Dan: Set Motor Speed
-    Dan-&gt;&gt;+Dan: Set Motor Speed Trash
+    In Person User--&gt;&gt;+Jahmel: Set1 Motor Speed
+    Jahmel-&gt;&gt;+Cade: Set1 Motor Speed
+    Cade-&gt;&gt;+Dan: Set1 Motor Speed
+    Dan-&gt;&gt;-Dan: Set1 Motor Speed Trash
+    Web User--&gt;&gt;+Cade: Set2 Motor Speed
+    Cade-&gt;&gt;+Dan: Set2 Motor Speed
+    Dan-&gt;&gt;-Dan: Set2 Motor Speed Trash
     loop Every 3 second
     Cade-&gt;&gt;+Dan: Sensor Data
     Cade--&gt;&gt;+Web User: Sensor Data
