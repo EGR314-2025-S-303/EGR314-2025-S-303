@@ -20,11 +20,13 @@ sequenceDiagram
     Dan->>+Jahmel: Turn on LED1
     Jahmel->>-Jahmel: LED1 ON, Trash Message
     actor In Person User
-    In Person User-->>+Jahmel: Set Motor Speed
-    Jahmel->>+Cade: Set Motor Speed
-    Web User-->>+Cade: Set Motor Speed
-    Cade->>+Dan: Set Motor Speed
-    Dan->>+Dan: Set Motor Speed Trash
+    In Person User-->>+Jahmel: Set1 Motor Speed
+    Jahmel->>+Cade: Set1 Motor Speed
+    Cade->>+Dan: Set1 Motor Speed
+    Dan->>-Dan: Set1 Motor Speed Trash
+    Web User-->>+Cade: Set2 Motor Speed
+    Cade->>+Dan: Set2 Motor Speed
+    Dan->>-Dan: Set2 Motor Speed Trash
     loop Every 3 second
     Cade->>+Dan: Sensor Data
     Cade-->>+Web User: Sensor Data
