@@ -96,9 +96,9 @@ The Fan Control table defines the structure of messages for controlling fan spee
 | 1     | prefix_1        | uint8_t      | 0x41      | 0x41      | 0x41         |
 | 2     | prefix_2        | uint8_t      | 0x5a      | 0x5a      | 0x5a         |
 | 3     | source_id       | uint8_t      | 1         | 3         | 0x01         |
-| 4     | destination_id  | uint8_t      | 1         | 3 & 88    | 0x04         |
+| 4     | destination_id  | uint8_t      | 1         | 3 & 88    | 0x03         |
 | 5     | message_type    | uint8_t      | 0x20      | 0x20      | 0x20         |
-| 6     | fan_id          | uint8_t      | 0         | 1         | 0x02         |
+| 6     | fan_id          | uint8_t      | 0         | 1         | 0x01         |
 | 7     | status          | uint8_t      | 0         | 1         | 0x01         |
 | 8     | fan_speed_data  | uint8_t      | 0         | 3         | 0x02         |
 | 9     | fan_speed_set   | uint8_t      | 0         | 3         | 0x01         |
