@@ -107,3 +107,14 @@ The Fan Control table defines the structure of messages for controlling fan spee
 | 64    | suffix_2        | uint8_t      | 0x42      | 0x42      | 0x42         |
 
 
+
+
+### Message Type Matrix
+
+| Message Type               | Message ID | Cade<br>Role: MQTT<br>ID: 0x01                     | Dan<br>Role: Motor<br>ID: 0x03                      | Jahmel<br>Role: HMI<br>ID: 0x02                             |
+|----------------------------|------------|---------------------------------------------------|----------------------------------------------------|-------------------------------------------------------------|
+| sensor value               | 0x10       | S<br>(Temperature Value in °C)                   | R<br>(motor turns on to cool system)               | R<br>(Debug LEDs on/off within value ranges)                |
+| Set Motor Speed            | 0x20       | S<br>(Publish 1, 2, or 3)                        | R<br>(Set 1 = Low, 2 = Medium, 3 = High)           | S<br>(toggle debug button press 1, 2, 3)                    |
+| Motor Speed Status/Speed  | 0x20       | R<br>(Upload 1, 2, 3)                            | S<br>(Broadcast status/speed)                      | R<br>(Debug LED blinks to recognize message)                |
+| ...                        | ...        | ...                                               | ...                                                | ...                                                         |
+
