@@ -590,6 +590,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#message-type-matrix" class="md-nav__link">
+    Message Type Matrix
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -950,6 +957,48 @@
 <td>0x42</td>
 <td>0x42</td>
 <td>0x42</td>
+</tr>
+</tbody>
+</table>
+<h3 id="message-type-matrix">Message Type Matrix</h3>
+<table>
+<thead>
+<tr>
+<th>Message Type</th>
+<th>Message ID</th>
+<th>Cade<br>Role: MQTT<br>ID: 0x01</th>
+<th>Dan<br>Role: Motor<br>ID: 0x03</th>
+<th>Jahmel<br>Role: HMI<br>ID: 0x02</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sensor value</td>
+<td>0x10</td>
+<td>S<br>(Temperature Value in °C)</td>
+<td>R<br>(motor turns on to cool system)</td>
+<td>R<br>(Debug LEDs on/off within value ranges)</td>
+</tr>
+<tr>
+<td>Set Motor Speed</td>
+<td>0x20</td>
+<td>S<br>(Publish 1, 2, or 3)</td>
+<td>R<br>(Set 1 = Low, 2 = Medium, 3 = High)</td>
+<td>S<br>(toggle debug button press 1, 2, 3)</td>
+</tr>
+<tr>
+<td>Motor Speed Status/Speed</td>
+<td>0x20</td>
+<td>R<br>(Upload 1, 2, 3)</td>
+<td>S<br>(Broadcast status/speed)</td>
+<td>R<br>(Debug LED blinks to recognize message)</td>
+</tr>
+<tr>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
+<td>...</td>
 </tr>
 </tbody>
 </table>
