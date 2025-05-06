@@ -1246,6 +1246,14 @@ Early versions lacked clear message framing or validation, resulting in inconsis
 <p>Fan Control Logic Centralized on Fan Board
 Originally, fan speed decisions were handled by the Temperature Board. This created unnecessary complexity. The logic was moved to the Fan Board to encapsulate control and simplify message flow, aligning better with modular design principles.</p>
 </li>
+<li>
+<p>Integration of a Message Buffer Queue
+Initially, each board processed incoming messages immediately upon receipt, which caused issues when multiple messages arrived in quick succession or during critical processing windows. To resolve this, a message buffer queue was implemented for each board, allowing messages to be queued and processed sequentially. This change significantly improved system stability under high message traffic, ensured no messages were lost, and enabled smoother multitasking across modules.</p>
+</li>
+<li>
+<p>Adjustment of Temperature Data Format for UART Compatibility
+Initially, temperature values ranged from -40°C to 155°C. However, using an uint8_t data type for UART transmission caused issues, as it couldn't represent negative values. To resolve this, the team remapped the range to 0–255 by offsetting the raw temperature values (e.g., adding 40), allowing the full range to fit within a single byte. The decoding logic was then adjusted on the receiving end to subtract the offset and restore the correct temperature value. This ensured compatibility with the communication protocol without sacrificing accuracy.</p>
+</li>
 </ol>
 
 
