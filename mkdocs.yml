@@ -85,3 +85,18 @@ extra:
     - icon: fontawesome/regular/file-code
       link: /2023_fall
       name: 2023 Site    
+
+nav:
+  - Home: index.md
+  - Block Diagram, Process Diagram, and Message Structure:
+      - Overview: Block Diagram, Process Diagram, and Message Structure/index.md
+  - Ideation and Concept Generation:
+      - Overview: Ideation and Concept Generation/index.md
+  - Team Organization:
+      - Overview: Team Organization/index.md
+  - Innovation Showcase Poster:
+      - Overview: Innovation Showcase Poster/index.md
+  - Resources:
+      - Overview: Resources/index.md
+  - Reflection:
+      - Overview: Reflection/index.md
