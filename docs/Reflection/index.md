@@ -35,3 +35,25 @@ Finally, one of the most practical lessons we learned was how to adapt on the fl
 
 5. **Take Advantage of Office Hours**  
    Use office hours to ask questions and get help. Whether you're stuck on debugging, need clarification on a concept, or want feedback on your design, these sessions are a valuable resource.
+
+
+
+
+## Version 2.0: Communication Architecture and Project Direction Improvements
+
+If we were to develop a Version 2.0 of our communication architecture, one of the first improvements would be setting a clearer foundation for the overall project direction. Early in the design process, our concept—focused on a heat-controlled cooling station—met the course requirements but lacked the kind of interactivity and engagement that might have made the system more dynamic and fun. In hindsight, selecting a more centralized and interactive concept would have motivated a more cohesive design and made demonstrations more compelling. For example, instead of simply toggling fan speeds based on temperature, a Version 2.0 project might involve user-controlled challenges, visual feedback, or gamified input—providing a better platform to showcase our technical work and creativity.
+
+From a team dynamics perspective, we would also improve how we align subsystem roles with individual skills. A more intentional conversation early in the semester about each member’s strengths in C, Python, or debugging tools could have made a significant impact on productivity. This would have allowed us to assign team members to microcontroller platforms that best matched their experience. For instance, members comfortable with Python could take on ESP32-based subsystems, while those familiar with MPLAB and C could handle tasks like sensor interfacing on PIC.
+
+One of the biggest architectural shifts would be to move most subsystems—especially the HMI and display module—to the ESP32 using MicroPython. Python’s terminal-based interface allows for easy debugging, print statements, and dynamic testing, which dramatically improves development speed and reliability. In contrast, MPLAB for PIC offers limited real-time feedback, making it harder to identify and resolve issues. This shift would make the system more developer-friendly and reduce time spent troubleshooting UART messages, peripheral registers, or mismatched settings.
+
+That said, the PIC microcontroller still offers benefits in dedicated, one-way communication roles. For instance, the temperature sensor subsystem only needs to measure data and broadcast it at fixed intervals. By keeping this task isolated to the PIC using minimal C code, we reduce complexity and ensure reliable performance. In this configuration, the PIC would serve strictly as a transmit-only node, simplifying its firmware by removing the need to parse or respond to incoming messages.
+
+On the protocol side, Version 2.0 would improve message structure by including checksums or message counters to validate data integrity, detect dropped messages, and improve synchronization. Additionally, we would modularize our codebase, separating low-level hardware interfaces, message parsing, and application logic into clean, reusable components. Most of this could be shared across Python-based subsystems, reducing duplication and improving team collaboration.
+
+To further enhance reliability and system-level feedback, we’d implement heartbeat/status pings, watchdog timers, and perhaps an error-reporting protocol so subsystems could identify and respond to faults more effectively. These changes would help create a more robust, fault-tolerant system architecture.
+
+In summary, Version 2.0 of our project would benefit from a better conceptual foundation, a more engaging project focus, smarter alignment of team skills, and a platform strategy built around the ESP32 for flexibility and debuggability. Coupled with refined message protocols, modular code, and added reliability features, this version would be more functional, easier to develop, and more impressive to demonstrate.
+
+
+
