@@ -4,9 +4,18 @@ tags:
 ---
 
 ## **Block Diagram**
+
 The team’s block diagram outlines the flow of communication and functionality across different components in the system. Cade, utilizing an ESP32 microchip, serves as the central hub for bidirectional communication with the other team members, who use PIC microcontrollers. Data flows sequentially from Cade to Dan, who manages both sensor integration and actuator control, and then to Jahmel, responsible for the Human-Machine Interface (HMI), before looping back to Cade. The boards communicate via UART, ensuring reliable data transmission between each module. Additionally, the sensor and actuator exchange data through either SPI or I2C protocols, enabling efficient and precise control of the system’s operation.
 
 <img src="Team-Block-Diagram-V2.png">
+
+### Block Diagram Structure and Design Decisions
+
+The block diagram was structured to clearly represent the final architecture of the system, reflecting the final team composition and clearly defined subsystem responsibilities: Fan Board (actuation), Wi-Fi Board (server communication), and HMI Board (user interface). Each module is connected via UART, while the Wi-Fi Board manages bidirectional communication with a server over Wi-Fi.
+
+The decision to use a modular structure was based on product requirements emphasizing real-time responsiveness, clear subsystem roles, and ease of debugging. Isolating functionality by board simplifies troubleshooting and allows parallel development among team members. All power and signal lines were documented to ensure traceability and consistency with the schematic.
+
+
 
 ## **Sequence Diagram**
 
@@ -21,12 +30,14 @@ sequenceDiagram
     Jahmel->>-Jahmel: LED1 ON, Trash Message
     actor In Person User
     In Person User-->>+Jahmel: Set1 Motor Speed
-    Jahmel->>+Cade: Set1 Motor Speed
-    Cade->>+Dan: Set1 Motor Speed
-    Dan->>-Dan: Set1 Motor Speed Trash
-    Web User-->>+Cade: Set2 Motor Speed
-    Cade->>+Dan: Set2 Motor Speed
-    Dan->>-Dan: Set2 Motor Speed Trash
+    Jahmel->>+Cade: Set Motor Speed
+    Web User-->>+Cade: Set Motor Speed
+    Cade->>+Dan: Set Motor Speed
+    Dan->>-Dan: Set Motor Speed Trash
+    Dan->>+Jahmel: Motor Speed Set
+    Jahmel->>+Cade: Motor Speed Set
+    Cade->>+Dan: Motor Speed Set
+    Dan->>-Dan: Motor Speed Set Trash
     loop Every 3 second
     Cade->>+Dan: Sensor Data
     Cade-->>+Web User: Sensor Data
@@ -36,6 +47,34 @@ sequenceDiagram
     Cade->>-Cade: Sensor Data Trash
     end
 ```
+
+## Functionality of Communication Sequence Diagram
+
+How the Diagram Meets Product Requirements
+The communication sequence diagram illustrates the data flow between users, system components, and subsystems, effectively meeting key product requirements for real-time data exchange, responsive control, and system feedback.
+
+**User Interaction:** The diagram begins with both Web User and In Person User actions, such as turning on an LED or setting the motor speed. This satisfies the product requirement for user control and remote monitoring via web and local interfaces.
+
+**Message Propagation:** Messages are passed through various system components (Cade, Dan, Jahmel), reflecting the distributed nature of the system. Each actor communicates with the next in line to trigger changes like turning on LEDs or setting motor speeds, fulfilling the need for inter-component communication.
+
+**Data Synchronization:** The diagram shows periodic sensor data updates every 3 seconds, aligning with the product requirement for continuous feedback from the system, ensuring that temperature and motor speed information is regularly sent to users and across the system.
+
+**Trash Message Handling:** The inclusion of "trash" messages indicates that some messages are discarded, reflecting a decision to filter out invalid or redundant data. This ensures message integrity and reduces unnecessary processing, maintaining system efficiency.
+
+## Design Decision Process
+
+The decision to structure the diagram with multiple actors and clear message flows was driven by the need to represent both user interaction and automated processes within the system. The team prioritized clarity in showing how user inputs translate into actions across different components, ensuring that the process is transparent and easy to follow.
+
+**Multiple User Types:** The inclusion of both a Web User and In Person User reflects different control interfaces, meeting the user needs for flexibility in managing the system remotely or locally.
+
+**Modular Flow of Communication:** The diagram breaks down the interaction into manageable steps, where each system actor (Cade, Dan, Jahmel) has a clear responsibility, emphasizing modular design and separation of concerns, which is key to simplifying debugging and testing.
+
+**Sensor Data Loop:** The loop at the end of the diagram ensures that sensor data is continually updated, fulfilling the requirement for real-time monitoring and enabling dynamic adjustments in fan speed and other system states.
+
+**Trash Message Concept:** The team consciously added the concept of "trash" messages, ensuring that the system discards unnecessary or erroneous messages. This design choice helps maintain the system’s efficiency and responsiveness.
+
+
+
 ## Message ID
 
 The Message ID table defines the unique identifiers for system members and their associated addresses. Each member is assigned a specific ID and address for communication within the system.
@@ -111,10 +150,26 @@ The Fan Control table defines the structure of messages for controlling fan spee
 
 ### Message Type Matrix
 
+- S = Sending Message
+- R = Recieving Message
+
 | Message Type               | Message ID | Cade<br>Role: MQTT<br>ID: 0x01                     | Dan<br>Role: Motor<br>ID: 0x03                      | Jahmel<br>Role: HMI<br>ID: 0x02                             |
 |----------------------------|------------|---------------------------------------------------|----------------------------------------------------|-------------------------------------------------------------|
 | sensor value               | 0x10       | S<br>(Temperature Value in °C)                   | R<br>(motor turns on to cool system)               | R<br>(Debug LEDs on/off within value ranges)                |
 | Set Motor Speed            | 0x20       | S<br>(Publish 1, 2, or 3)                        | R<br>(Set 1 = Low, 2 = Medium, 3 = High)           | S<br>(toggle debug button press 1, 2, 3)                    |
 | Motor Speed Status/Speed  | 0x20       | R<br>(Upload 1, 2, 3)                            | S<br>(Broadcast status/speed)                      | R<br>(Debug LED blinks to recognize message)                |
-| ...                        | ...        | ...                                               | ...                                                | ...                                                         |
+
+
+
+# **Top 5 Biggest Changes to Software Design**
+
+1. Rewriting UART Handling with Interrupts
+Initially, UART communication used polling, which blocked execution and caused missed messages. The design was changed to use interrupt-driven UART to allow asynchronous communication, improving reliability and responsiveness across all boards.
+
+2. Structured Message Parsing and Validation
+Early versions lacked clear message framing or validation, resulting in inconsistent parsing. A robust parsing routine was added using delimiters and checksums to ensure complete and correct message handling, reducing system errors.
+
+3. Fan Control Logic Centralized on Fan Board
+Originally, fan speed decisions were handled by the Temperature Board. This created unnecessary complexity. The logic was moved to the Fan Board to encapsulate control and simplify message flow, aligning better with modular design principles.
+
 
