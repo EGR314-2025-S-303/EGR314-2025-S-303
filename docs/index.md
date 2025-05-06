@@ -22,7 +22,7 @@ Welcome to the official project page for **Team 303**, where we are developing a
 Our design is structured into four core subsystems, each led by a team member:
 
 - **Communication (Cade Clonts)** – Manages web communication using an ESP32.
-- **Sensor (Dotterboard)** – Collects environmental data using own microcontroller.
+- **Sensor (Daughterboard)** – Collects environmental data using own microcontroller.
 - **Actuator (Daniel Resnick)** – Controls mechanical responses based on system inputs.
 - **Human-Machine Interface (Jahmel Garduno)** – Ensures intuitive user interaction.
 
